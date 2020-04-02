@@ -69,7 +69,9 @@ h3{
     color: $dark_red;
 }
 h4{
-    
+    font-size: 25px;
+     padding: 0.3em 0;
+    color: $dark_red;
 }
 h5{
     
@@ -82,6 +84,7 @@ p{
     line-height: 22px;
     padding-bottom: 1em;
     font-weight: 300;
+    
     a{
     }
     
@@ -314,9 +317,23 @@ header{
             
             width: 70%;
         }
+        h4{
+            font-weight: 800;
+        }
         p{
-            font-size: 18px;
+            font-size: 20px;
             width: 70%;
+            line-height: 28px;
+            strong{
+                font-weight: 600;
+            }
+        }
+        ul{
+            font-size: 18px;
+            max-width: 60%;
+            strong{
+                font-weight: 600;
+            }
         }
     }
     .image{
@@ -455,8 +472,13 @@ header{
     }
     h2{
         color: #fff;
+        strong{
+            color: $red;
+        }
     }
     p{
+        font-size: 22px;
+        line-height: 30px;
         color: #fff;
     }
     button{
@@ -541,7 +563,11 @@ header{
             background-image: $grey_gradient;
             padding: 2em;
             height: 100%;
+            h3{
+               line-height: 0.5em; 
+            }
             h3 a{
+                
                text-transform: uppercase;
                 color: $dark_red;
                 text-decoration: none;
@@ -680,6 +706,13 @@ footer{
     }
     h3{
         font-size: 50px;
+    }
+    .blog .blog-entry .text h3 a{
+        font-size: 23px;
+        
+    }
+    .blog .blog-entry .text p{
+        font-size: 18px;
     }
     .more-blog{
         font-size: 30px;

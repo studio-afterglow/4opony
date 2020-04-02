@@ -100,6 +100,11 @@ h3 {
   text-transform: uppercase;
   color: #B30410; }
 
+h4 {
+  font-size: 25px;
+  padding: 0.3em 0;
+  color: #B30410; }
+
 p {
   font-size: 18px;
   line-height: 22px;
@@ -283,9 +288,19 @@ header {
       height: auto; }
     .about-us-div .text h2 {
       width: 70%; }
+    .about-us-div .text h4 {
+      font-weight: 800; }
     .about-us-div .text p {
+      font-size: 20px;
+      width: 70%;
+      line-height: 28px; }
+      .about-us-div .text p strong {
+        font-weight: 600; }
+    .about-us-div .text ul {
       font-size: 18px;
-      width: 70%; }
+      max-width: 60%; }
+      .about-us-div .text ul strong {
+        font-weight: 600; }
   .about-us-div .image img {
     width: 100%;
     object-fit: cover;
@@ -384,7 +399,11 @@ header {
     transform: skewY(3deg); }
   .red-div h2 {
     color: #fff; }
+    .red-div h2 strong {
+      color: #F20505; }
   .red-div p {
+    font-size: 22px;
+    line-height: 30px;
     color: #fff; }
   .red-div button {
     background-color: #000;
@@ -454,6 +473,8 @@ header {
       background-image: linear-gradient(150deg, #F2F2F2 70%, #DDDDDD);
       padding: 2em;
       height: 100%; }
+      .blog .blog-entry .text h3 {
+        line-height: 0.5em; }
       .blog .blog-entry .text h3 a {
         text-transform: uppercase;
         color: #B30410;
@@ -567,6 +588,12 @@ footer {
 
   h3 {
     font-size: 50px; }
+
+  .blog .blog-entry .text h3 a {
+    font-size: 23px; }
+
+  .blog .blog-entry .text p {
+    font-size: 18px; }
 
   .more-blog {
     font-size: 30px;
