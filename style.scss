@@ -1,0 +1,762 @@
+@import "reset.scss";
+@import "mixims.scss";
+
+/* **** OVERALL **** */
+
+html,body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+a{
+    color: $dark_red;
+    transition-duration: $duration;
+    &:hover{
+        color: $red;
+    }
+}
+.wp-block-button,button{
+    margin: 1em;
+    @include center;
+    padding: 0.5em;
+    cursor: pointer;
+    transition-duration: $duration;
+    max-width: 200px;
+    white-space:pre-wrap;
+    display: block;
+    background-color: $red;
+    border: solid $red 2px;
+    
+    text-align:center;
+    text-transform: uppercase;
+    font-size: 20px;
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    &:hover{
+        background-color: #fff;
+        a{
+           color: $red; 
+        }
+        
+    }
+}
+
+/* **** TYPOGRAPHY **** */
+
+h1{
+    
+}
+h2{
+    color: $dark_red;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    text-align:center;
+    padding: 0.7em 0;
+}
+h3{
+    font-size: 40px;
+    font-weight: 600;
+     padding: 0.3em 0;
+    text-transform: uppercase;
+    color: $dark_red;
+}
+h4{
+    
+}
+h5{
+    
+}
+h6{
+    
+}
+p{
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 1em;
+    font-weight: 300;
+    a{
+    }
+    
+    strong{
+    }
+}
+ul{
+    padding-bottom: 1em;
+    list-style: disc;
+    padding-left: 2em;
+    font-size: 17px;
+    word-spacing: 0.05em;
+    letter-spacing: 0.04em;
+    
+}
+
+/* **** HEADER **** */
+
+.logo{
+        max-height: 100px;
+    transition-duration: $duration;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.7;
+    }
+    }
+.hamburger-flex{
+    display: flex;
+    align-items: center;
+}
+.open{
+        display: none;
+        cursor: pointer;
+        width: 30px;
+    position: absolute;
+    }
+.bar{
+	height: 4px;
+    margin-top: 1px;
+	width: 30px;
+	background-color: #fff;
+	transition: $duration ease;
+            
+            &:hover{
+                color: $red;
+            }
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+
+.header-menu .open.change #bar1{
+    transform: translateY(4px) rotateZ(45deg);
+    &:hover{
+                color: $red;
+            }
+}
+.header-menu .open.change #bar3{
+    transform: translateY(-6px) rotateZ(-45deg);
+    &:hover{
+                color: $red;
+            }
+}
+.header-menu .open.change #bar2{
+    opacity: 0;
+}
+
+
+.header-image{
+    
+    position: relative;
+    height: 125vh;
+    background-image: url(images/car-tyres-63928_1920.jpg);
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: darken;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    z-index: 2;
+    
+    .main-titles{
+        font-family: "Teko", sans-serif;
+        width: 100%;
+        div{
+            margin-top: 20vh;
+            display: block;
+            height: auto;
+            width: 60%;
+            padding-left: 5em;
+        }
+        h1{
+            
+            color: #fff;
+            font-size: 130px;
+            font-weight: 700;
+        }
+        h2{
+            font-size: 65px;
+            color: $dark_red;
+            font-weight: 400;
+            text-align: left;
+        }
+    }
+}
+.header-menu{
+
+    display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(#000 10%, rgba(0,0,0,0) 82%);
+    padding: 30px;
+    padding-bottom: 50px;
+     
+    .main-navigation{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        
+    }
+        
+    ul{
+        padding-bottom: 0;
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        li a{
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition-duration: $duration;
+            
+            &:hover{
+                color: $dark_red;
+            }
+        }
+    }
+}
+.mobile-main-navigation{
+    
+    width: 0%;
+    overflow-x: hidden;
+    height: 100vh;
+    z-index: 3;
+    position: fixed;
+    background-color: $burgund;
+    transition-duration: $duration;
+    display: block;
+    ul{
+        height: 85vh;
+        margin-top: 10vh;
+        padding-top: 4em;
+        list-style: none;
+        flex-direction: column;
+        width: auto;
+        padding: 0;
+        align-content: space-between;
+    }
+    
+    li{
+        display: block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        
+        text-align: center;
+        padding: 1em;
+        
+        &:not(:first-child){
+            margin-top: auto;
+        }
+        
+        a{
+        color: #fff;
+        transition-duration:$duration;
+            text-decoration: none;
+            &:hover{
+            color: $red;
+        }
+        }
+    }
+    
+    .close{
+        padding: 0.5em;
+        color: #fff;
+        font-size: 55px;
+        display: block;
+        cursor: pointer;
+        transition-duration: $duration;
+        
+        &:hover{
+            color: $red;
+        }
+    }
+}
+.open-nav{
+    width: 100%;
+}
+
+/* **** MAIN PAGE **** */
+
+header{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.about-us-div{
+    display: grid;
+    .text{
+        background-image: linear-gradient(150deg, #F2F2F2 70%, #DDDDDD);
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        div{
+            height: auto;
+            
+        }
+        h2{
+            
+            width: 70%;
+        }
+        p{
+            font-size: 18px;
+            width: 70%;
+        }
+    }
+    .image{
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+     
+}
+.about-right{
+    grid-template-columns: 5fr 3fr;
+    .text{
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+        width:125%;
+        text-align: left;
+        h2{
+            text-align:left;
+        }
+    }
+    .image{
+        img{
+            
+        }
+    }
+}
+.about-left{
+    grid-template-columns: 2fr 5fr;
+    .text{
+        text-align: right;
+        padding-left: 30%;
+        h2{
+            text-align:right;
+            width: 100%;
+        }
+        p{
+            width: 100%;
+        }
+    }
+    .image{
+        clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+        width:135%;
+        img{
+            height: 100%;
+        }
+    }
+}
+.first-about{
+    margin-top: -20%;
+    .image{
+        img{
+            height: 100%;
+        }
+    }
+    .text{
+        padding-top: 40%;
+        z-index: 0;
+    }
+   
+}
+
+.dark-div{
+    background-image:url(images/car-tyres-63928_1920.jpg);
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: darken;
+    text-align: center;
+    background-position: center;
+    
+    h2{
+        color: #fff;
+    }
+    h3{
+        color: $dark_red;
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    text-align:center;
+        text-transform: none;
+    }
+    table{
+        margin: 1em;
+        @include center;
+        td{
+            width: 30%;
+        }
+    }
+    p{
+        color: #fff;
+        font-weight: 400;
+        font-size: 18px;
+        strong{
+            font-weight: 600;
+            color: $dark_red;
+        }
+    }
+    
+    .contacts, .branches{
+        display: flex;
+        justify-content:space-between;
+        width: 70%;
+        flex-wrap: wrap;
+        @include center;
+        text-align: center;
+        
+        p{
+          font-size: 24px;  
+        }
+    }
+    .contacts{
+        padding: 0 2em 2em 2em;
+        p{
+            padding: 1em 2em;
+        }
+    }
+    .branches{
+        padding: 2em;
+        p{
+            padding: 1em 4em;
+        }
+    }
+}
+
+.red-div{
+    background-image: $red_gradient;
+    padding: 4em;
+    text-align: center;
+    text-align:center;
+    transform: skewY(-3deg);
+    margin-top: -3%;
+    margin-bottom: -3%;
+    
+    .inside{
+        transform: skewY(3deg);
+    }
+    h2{
+        color: #fff;
+    }
+    p{
+        color: #fff;
+    }
+    button{
+        background-color: #000;
+        border-color: #000; 
+        @include center;
+        &:hover{
+            background-color: $pink;
+            border-color: $burgund;
+            a{
+                color: $burgund;
+            }
+        }
+    }
+}
+
+.before-red-div{
+    padding-bottom: 5vw;
+}
+.after-red-div{
+    padding-top: 5vw !important;
+}
+
+.shop{
+    background-image:url(images/car-tyres-63928_1920.jpg);
+    background-attachment: fixed;
+    background-color: rgba(255,255,255,0.9);
+    background-blend-mode: lighten;
+    padding: 2.5em;
+    
+    .wp-block-button{
+        @include center;
+    }
+    table{
+        margin: 1em;
+        @include center;
+        td{
+            width: 30%;
+        }
+    }
+    p{
+        color: #fff;
+        font-weight: 400;
+        font-size: 18px;
+        strong{
+            font-weight: 600;
+            color: $dark_red;
+            margin-right: 3em;
+        }
+    }
+}
+
+.blog{
+    width: 90%;
+    @include center;
+    
+    .more-blog{
+        text-align: center;
+        padding: 2em 0 2em 0;
+        a{
+            text-decoration: none;
+        }
+    }
+    
+    .blog-grid{
+        display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .blog-entry{
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0,0,0,0.3) 2px 2px 5px;
+        .entry-image{
+            min-height: 300px;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .text{
+            background-image: $grey_gradient;
+            padding: 2em;
+            height: 100%;
+            h3 a{
+               text-transform: uppercase;
+                color: $dark_red;
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: 400;
+                transition-duration: $duration;
+                &:hover{
+                    color: $red;
+                }
+            }
+            p{
+                font-size: 24px;
+                color: #707070;
+                margin-top: 1em;
+                line-height: 1.2em;
+            }
+            button{
+                @include center;
+            }
+        }
+    }
+}
+.news{
+    padding-bottom: 1vh !important;
+    .news-grid{
+        padding-bottom: 4vh !important;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        .text{
+            height: auto;
+            .news-one{
+                padding: 1em;
+            }
+            a{
+                            text-decoration: none;
+
+            }
+            text-align:center;
+            text-transform: uppercase;
+            h5{
+                margin-bottom: 0.5em;
+                font-weight: 900;
+            }
+            h4 a{
+                color: #000;
+                &:hover{
+                    color: $dark_red;
+                }
+            }
+        }
+        .image{
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+            -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+            height: auto;
+        img{
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    }}
+
+.contact-div{
+    padding-bottom: 5vh;
+}
+.scroll{
+    cursor: pointer;
+    width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 40px solid red;
+    
+        opacity: 0.3;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition-duration: $duration;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+footer{
+    margin-top: -8vh;
+    text-align: center;
+    padding: 4em;
+    background-image: $red_gradient;
+    color: #fff;
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    a{
+        color: $pink;
+        &:hover{
+            color: $red;
+        }
+    }
+}
+
+@media screen and (max-width: 1250px){
+    
+}
+@media screen and (max-width: 1000px) and (min-width:650px){
+    .header-image{
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+    .blog .blog-grid{
+        display: block;
+    }
+    .blog .blog-entry{
+        margin-bottom: 1em;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        .text{
+            height: auto;
+        }
+    }
+}
+@media screen and (max-width: 800px){
+    .dark-div .contacts{
+        padding: inherit;
+    }
+    .news .news-grid{
+        padding-bottom: 1vh !important;
+    }
+    .dark-div .contacts, .dark-div .branches{
+        width: 95%;
+        justify-content: center;
+    }
+    h2{
+       font-size: 65px; 
+    }
+    h3{
+        font-size: 50px;
+    }
+    .more-blog{
+        font-size: 30px;
+        width: 90%;
+        @include center;
+    }
+}
+@media screen and (max-width: 770px){
+    .header-menu{
+        justify-content: space-around;
+        align-content: center;
+        padding: 0;
+        .logo{
+            max-width: 40%;
+        }
+        .logo,.hamburger-flex{
+            padding-top: 30px;
+        }
+        .main-navigation{
+        display: none;
+    }
+        .open{
+        display: block;
+        position: absolute;
+        z-index: 5;
+    }
+        .change{
+    position: fixed;
+}
+    }
+}
+@media screen and (max-width: 700px){
+    .dark-div .branches{
+        padding: inherit;
+    }
+    .about-us-div{
+        grid-template-columns: 1fr;
+    }
+    .about-left:not(.first-about),.about-right:not(.first-about){
+        .text{
+            width: auto;
+            padding: 0.5em;
+            clip-path:none;
+            
+            h2{
+               width: 95%; 
+            }
+            p{
+               width: 95%; 
+            }
+        }
+        .image{
+            max-width: 100%;
+            clip-path:none;
+        }
+    }
+    .first-about{
+        max-width: 100vw;
+overflow: hidden;
+        .text{
+            padding-top: 22%;
+            clip-path:none;
+        }
+    }
+}
+@media screen and (max-width: 650px){
+    .header-image{
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+        height: 105vh;
+    }
+    .blog .blog-grid{
+        grid-template-columns: 1fr;
+    }
+    .header-image .main-titles div{
+        margin-top: 10vh;
+        width: 90%;
+        @include center;
+        padding-left: inherit;
+        h1{
+            font-size: 90px;
+        }
+        h2{
+            font-size: 50px;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .red-div h2{
+        font-size: 50px;
+    }
+}

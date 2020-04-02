@@ -1,0 +1,13 @@
+$red:#F20505;
+$dark_red:#B30410;
+$burgund: #730202;
+$pink: #FFC6C6;
+
+$duration: 200ms;
+$grey_gradient: linear-gradient(150deg, #F2F2F2 70%, #DDDDDD);
+$red_gradient : linear-gradient(#A60303,#530202);
+
+@mixin center{
+    margin-left: auto;
+    margin-right: auto;
+}
