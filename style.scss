@@ -101,6 +101,7 @@ ul{
 /* **** HEADER **** */
 
 .logo{
+    height: 100%;
         max-height: 100px;
     transition-duration: $duration;
     cursor: pointer;
@@ -189,8 +190,8 @@ ul{
     }
 }
 .header-menu{
-
     display: flex;
+    align-items: center;
     flex-direction: row;
     background-image: linear-gradient(#000 10%, rgba(0,0,0,0) 82%);
     padding: 30px;
@@ -211,6 +212,10 @@ ul{
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+        flex-wrap: wrap;
+        li{
+            padding: 0.7em;
+        }
         
         li a{
             color: #fff;
@@ -654,6 +659,12 @@ footer{
     }
 }
 @media screen and (max-width: 800px){
+    .header-menu{
+        align-items: stretch;
+    }
+    .header-menu ul{
+        flex-wrap: nowrap;
+    }
     .dark-div .contacts{
         padding: inherit;
     }
